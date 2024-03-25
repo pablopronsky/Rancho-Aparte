@@ -3,8 +3,10 @@ import Hero from "../components/Hero.astro";
 import Navbar from "../components/Navbar.astro"
 import Services from "../components/Services.astro";
 import DividerSimple from "../shared/DividerSimple.astro";
-import DividerShadow from "../shared/DividerShadow.astro";
 import '../styles/global.css';
+import Info from "../components/Info.astro";
+import DividerInfo from "../shared/DividerInfo.astro";
+import Footer from "../components/Footer.astro";
 ---
 
 <html lang="en">
@@ -19,6 +21,9 @@ import '../styles/global.css';
 		<Navbar />
 		<Hero />
 		<DividerSimple />
-		<Services />		
+		<Services />
+		<DividerInfo />
+		<Info />
+		<Footer />
 	</body>
 </html>
