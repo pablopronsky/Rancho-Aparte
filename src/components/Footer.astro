@@ -1,19 +1,26 @@
 ---
 import { Image } from 'astro:assets';
 import Logo from '../assets/logo.png';
+import DividerSimple from '../shared/DividerSimple.astro';
 
 ---
-<div class="">
-	<footer class="p-4 rounded-lg shadow md:px-6 md:py-8 bg-purple-light">
+
+<div>
+<DividerSimple />
+	<footer class="p-4 rounded-lg shadow md:px-6 md:py-8 bg-white">
 		<div class="sm:flex sm:items-center sm:justify-center">
 			<a href="#" target="_blank" class="flex items-center mb-4 sm:mb-0">
 				<Image src={Logo} class="mr-4 w-24 h-auto" alt="Logo de Rancho Aparte" />
 				<span class="self-center text-xl font-semibold whitespace-nowrap">Rancho Aparte</span>
 			</a>
 		</div>
-		<hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
 		<span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
             © {new Date().getFullYear()} <a href="http://www.instagram.com/ranchooaparte" target="_blank" class="hover:underline">Rancho Aparte</a>. Todos los derechos reservados.
         </span>
 	</footer>
 </div>
+<style>
+	footer {
+		border: none;
+	}
+</style>
