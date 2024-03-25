@@ -1,0 +1,30 @@
+---
+import { Image } from 'astro:assets';
+import HeroImage from '../assets/hero_dog.png';
+---
+
+    <div class="bg-purple-light py-1 flex items-center"> 
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center"> 
+        <div>
+            <h1 class="text-2xl/tight sm:text-3xl/tight md:text-4xl/tight xl:text-5xl/tight font-bold text-heading-1">
+                <span class="text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-purple-500">Mimá a tu amigo de cuatro patas como se lo merece</span>
+              </h1>
+              
+          <p class="mt-2 max-w-2xl text-base text-gray-500"> 
+            En nuestro spa canino, ofrecemos servicios de peluquería, cuidado diario y una tienda con juguetes y muebles para perros.
+          </p>
+          <div class="mt-6"> 
+            <ul class="list-disc space-y-1 text-sm text-gray-600"> 
+              <li>Peluquería profesional para mantener a tu perro siempre elegante.</li>
+              <li>Cuidado diario en un amplio campo para que tu perro juegue y se divierta.</li>
+              <li>Tienda con juguetes y muebles para consentir a tu perro.</li>
+            </ul>
+          </div>
+        </div>
+        <div>
+          <Image src={HeroImage} alt="Imagen de perro" class="max-w-full" />
+        </div>
+      </div>
+    </div>
+  </div>

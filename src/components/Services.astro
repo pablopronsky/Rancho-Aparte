@@ -1,0 +1,36 @@
+---
+import Container from "../shared/Container.astro";
+import Paragraph from "../shared/Paragraph.astro";
+import Service from "./cards/Service.astro";
+import { services } from "../utils/data.ts";
+import Title from "../shared/Title.astro";
+
+type ServicesProps = {
+    title: string;
+    description: string;
+    icon: string
+};
+---
+
+<section id="services" class="mt-5 pt-12 bg-white">
+    <Container className="space-y-10 md:sapce-y-12">
+        <div class="text-center max-w-3xl mx-auto space-y-4">
+            <Title>
+                Nuestros servicios
+            </Title>
+            <Paragraph>
+                Todo lo que necesitas para tu amigo de cuatro patas, en un solo lugar.
+            </Paragraph>
+        </div>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {
+                    services.map((service: ServicesProps) => {
+                    return (
+                            <Service title={service.title} description={service.description} icon={service.icon}>
+                            </Service>
+                            );
+                    })
+            }
+        </div>
+    </Container>
+</section>
