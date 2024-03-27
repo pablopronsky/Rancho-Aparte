@@ -3,13 +3,14 @@ import Hero from "../components/Hero.astro";
 import Navbar from "../components/Navbar.astro"
 import Services from "../components/Services.astro";
 import DividerSimple from "../shared/DividerSimple.astro";
-import '../styles/global.css';
-import Info from "../components/Requirements.astro";
 import DividerInfo from "../shared/DividerInfo.astro";
 import Footer from "../components/Footer.astro";
 import Testimonials from "../components/Testimonials.astro";
-import Requirements from "../components/Requirements.astro";
 import Contact from "../components/Contact.astro";
+import RequirementsHairSalon from "../components/RequirementsHairSalon.astro";
+import RequirementsDayCare from "../components/RequirementsDayCare.astro";
+import '../styles/global.css';
+import DividerRequirements from "../shared/DividerRequirements.astro";
 ---
 
 <html lang="en">
@@ -30,19 +31,13 @@ import Contact from "../components/Contact.astro";
 		<DividerSimple />
 		<Services id="services"/>
 		<DividerInfo />
-		<Requirements id="requirements" />
+		<RequirementsHairSalon id="requirements" />
+		<DividerRequirements />
+		<RequirementsDayCare />
 		<Testimonials />
 		<Contact/>
 		<Footer />
 	</body>
-	<style>
-		html{
-			scroll-behavior: smooth;
-		}
-		body {
-			font-family: "Roboto Slab", serif;
-		}
-	</style>
 </html>
 
 
