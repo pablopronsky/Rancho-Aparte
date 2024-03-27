@@ -22,9 +22,9 @@ import DividerInfo from '../shared/DividerInfo.astro';
       </div>
       <div class="hidden lg:flex lg:gap-x-12">
         <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Home</a>
-        <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Servicios</a>
-        <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Quienes somos</a>
-        <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Contacto</a>
+        <a href="#services" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Servicios</a>
+        <a href="#testimonials" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Quienes somos</a>
+        <a href="#contact" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Contacto</a>
       </div>
       <div class="hidden lg:flex lg:flex-1 lg:justify-end">
         <button class="relative group overflow-hidden px-6 h-12 rounded-3xl flex space-x-2 items-center bg-gradient-to-r from-pink-500 to-purple-500 hover:to-purple-600">
@@ -45,11 +45,11 @@ import DividerInfo from '../shared/DividerInfo.astro';
       <div class="fixed inset-y-0 right-0 z-50 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
-            <span class="sr-only">Your Company</span>
+            <span class="sr-only">Rancho Aparte</span>
             <Image src={Logo} class="w-16 h-16" alt="Logo de Rancho Aparte" />
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
-            <span class="sr-only">Close menu</span>
+            <span class="sr-only">Cerrar menú</span>
             <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
               <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
@@ -58,10 +58,10 @@ import DividerInfo from '../shared/DividerInfo.astro';
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Home</a>
-              <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Servicios</a>
-              <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Quienes somos</a>
-              <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Contacto</a>
+              <a href="#home" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Home</a>
+              <a href="#services" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Servicios</a>
+              <a href="#testimonials" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Quienes somos</a>
+              <a href="#contact" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Contacto</a>
             </div>
             <div class="py-6">
               <button class="relative group overflow-hidden px-6 h-12 rounded-3xl flex space-x-2 items-center bg-gradient-to-r from-pink-500 to-purple-500 hover:to-purple-600">
@@ -113,18 +113,16 @@ import DividerInfo from '../shared/DividerInfo.astro';
 </div>
 <DividerInfo />
 <script>
+const mobileMenuButton = document.querySelector('button[aria-label="Open main menu"]')!;
+const mobileMenu = document.querySelector('div[role="dialog"]')!;
 
-const navButton = document.querySelector('.flex.lg:hidden button')!;  
-const mobileMenu = document.querySelector('.lg:hidden[role="dialog"]')!; 
+mobileMenuButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden');
+});
 
+const mobileMenuCloseButton = document.querySelector('button[aria-label="Close menu"]')!;
 
-if (navButton && mobileMenu) {
-  navButton.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden'); 
-  });
-}
-
-navButton.addEventListener('click', () => {
-  mobileMenu.classList.toggle('hidden'); 
+mobileMenuCloseButton.addEventListener('click', () => {
+  mobileMenu.classList.add('hidden');
 });
 </script>
