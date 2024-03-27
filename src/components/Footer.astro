@@ -1,11 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 import Logo from '../assets/logo.png';
-import DividerSimple from '../shared/DividerSimple.astro';
+import DividerSimpleFooter from '../shared/DividerSimpleFooter.astro';
 
 ---
-<DividerSimple />
-<div>
+
+<div class="">
 	<footer class="p-4 rounded-lg shadow md:px-6 md:py-8 bg-white">
 		<div class="sm:flex sm:items-center sm:justify-center">
 			<a href="#" target="_blank" class="flex items-center mb-4 sm:mb-0">
@@ -19,7 +19,8 @@ import DividerSimple from '../shared/DividerSimple.astro';
 	</footer>
 </div>
 <style>
-	footer {
-		border: none;
+	#footer {
+	margin-top:-3px;	
+	border: 1px solid black;
 	}
 </style>
