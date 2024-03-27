@@ -1,16 +1,15 @@
 ---
 import {Image} from 'astro:assets';
-import WhatsAppIcon from '../assets/whatsapp_icon.svg';
+import WhatsAppIcon from '../assets/whatsapp.png';
 
 ---
-<div>
-    <div class="flex items-center justify-center">
-        <button class="relative group overflow-hidden px-24 py-6 rounded-3xl animate-bounce flex space-x-2 items-center bg-gradient-to-r from-pink-500 to-purple-500 hover:to-purple-600">
-            <span class="relative text-2xl text-white ">Contactate</span>
-            <div class="flex items-center -space-x-3 translate-x-3">
-              <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
-              <Image src={WhatsAppIcon} alt="WhatsApp Icon" class="h-10 w-10 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" />
-            </div>
-          </button>
-    </div>
-</div>
+<div class="flex items-center justify-center pb-5" id="contact">
+    <a href="https://api.whatsapp.com/send/?phone=542214989857&text&type=phone_number&app_absent=0">
+      <div>
+        <button class="overflow-hidden px-20 py-6 rounded-2xl animate-bounce flex space-x-2 items-center bg-gradient-to-r from-pink-500 to-purple-500 hover:to-purple-600">
+          <span class="relative text-2xl text-white">Contactate</span>
+          <Image src={WhatsAppIcon} alt="WhatsApp Icon" class="h-11 w-11 stroke-white" />
+        </button>
+      </div>
+    </a>
+  </div>
