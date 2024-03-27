@@ -46,7 +46,7 @@ import DividerInfo from '../shared/DividerInfo.astro';
         <div class="flex items-center justify-between">
           <a href="#" class="-m-1.5 p-1.5">
             <span class="sr-only">Your Company</span>
-            <img class="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="">
+            <Image src={Logo} class="w-16 h-16" alt="Logo de Rancho Aparte" />
           </a>
           <button type="button" class="-m-2.5 rounded-md p-2.5 text-gray-700">
             <span class="sr-only">Close menu</span>
@@ -58,13 +58,21 @@ import DividerInfo from '../shared/DividerInfo.astro';
         <div class="mt-6 flow-root">
           <div class="-my-6 divide-y divide-gray-500/10">
             <div class="space-y-2 py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Product</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Features</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Marketplace</a>
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Company</a>
+              <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Home</a>
+              <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Servicios</a>
+              <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Quienes somos</a>
+              <a href="#" class="hover:scale-110 transform active:scale-75 transition-transform hover:underline text-base block py-2 px-3 md:p-0 text-gray-900 rounded hover:text-purple-dark md:hover:bg-transparent md:hover:text-purple-dark ">Contacto</a>
             </div>
             <div class="py-6">
-              <a href="#" class="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50">Contactate</a>
+              <button class="relative group overflow-hidden px-6 h-12 rounded-3xl flex space-x-2 items-center bg-gradient-to-r from-pink-500 to-purple-500 hover:to-purple-600">
+                <span class="relative text-sm text-white ">Contactate</span>
+                <div class="flex items-center -space-x-3 translate-x-3">
+                  <div class="w-2.5 h-[1.6px] rounded bg-white origin-left scale-x-0 transition duration-300 group-hover:scale-x-100"></div>
+                  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 stroke-white -translate-x-2 transition duration-300 group-hover:translate-x-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
+              </button>
             </div>
           </div>
         </div>
@@ -80,11 +88,11 @@ import DividerInfo from '../shared/DividerInfo.astro';
       <div class="hidden sm:mb-8 sm:flex sm:justify-center">
       </div>
       <div class="text-center">
-        <div class="text-4xl font-bold tracking-tight text-gray-800 sm:text-6xl">
-          <h1><span class="text-transparent bg-clip-text bg-gradient-to-br from-pink-400 from-20% via-primary via-30% to-indigo-400">Vacaciones</span></h1> 
+        <div class="text-4xl font-bold tracking-wide text-gray-800 sm:text-6xl">
+          <h1 class="bg-clip-text bg-gradient-to-tr from-[#ff80b5] to-[#9089fc]">Vacaciones</h1> 
           <h2>en cuatro patas</h2>
         </div>
-        <p class="mt-6 text-lg leading-8 text-gray-600">Nos enfocamos en el bienestar y la diversión de tu mascota, brindando atención personalizada y profesional en un ambiente amigable. Tu amigo peludo se va a sentir como en casa.</p>
+        <p class="mt-6 text-lg tracking-tight leading-8 text-gray-600">Nos enfocamos en el bienestar y la diversión de tu mascota, brindando atención personalizada y profesional en un ambiente amigable. Tu amigo peludo se va a sentir como en casa.</p>
         <div class="mt-10 flex items-center justify-center gap-x-6">
           <a href="#" class="rounded-md bg-gradient-to-r from-pink-500 to-purple-500 hover:to-purple-600 transform transition duration-500 
           hover:scale-110 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Empezar</a>
@@ -104,3 +112,19 @@ import DividerInfo from '../shared/DividerInfo.astro';
   </div>
 </div>
 <DividerInfo />
+<script>
+
+const navButton = document.querySelector('.flex.lg:hidden button')!;  
+const mobileMenu = document.querySelector('.lg:hidden[role="dialog"]')!; 
+
+
+if (navButton && mobileMenu) {
+  navButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden'); 
+  });
+}
+
+navButton.addEventListener('click', () => {
+  mobileMenu.classList.toggle('hidden'); 
+});
+</script>

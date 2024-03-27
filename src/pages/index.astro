@@ -12,11 +12,15 @@ import Testimonials from "../components/Testimonials.astro";
 
 <html lang="en">
 	<head>
+		<title>Rancho Aparte</title>
+		<link rel="stylesheet" href="styles.css">
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/png" href="../assets/logo" sizes="32x32"/>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@501&display=swap" rel="stylesheet">
 		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Rancho Aparte</title>
+		<meta name="generator" content={Astro.generator} />		
 	</head>
 	<body>
 		<Navbar />
@@ -28,4 +32,11 @@ import Testimonials from "../components/Testimonials.astro";
 		<Testimonials />
 		<Footer />
 	</body>
+	<style>
+		body {
+			font-family: "Roboto Slab", serif;
+		}
+	</style>
 </html>
+
+
