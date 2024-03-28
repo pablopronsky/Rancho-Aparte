@@ -148,9 +148,9 @@ import Logo from '../../src/assets/logo.png'
   }
 </style>
 <script>
-  const toggleMenuButton = document.getElementById('toggleMenuOpen');
-  const menu = document.getElementById('MenuMobile');
-  const closeMenuButton = document.getElementById('toggleMenuClose');
+  const toggleMenuButton = document.getElementById('toggleMenuOpen')!;
+  const menu = document.getElementById('MenuMobile')!;
+  const closeMenuButton = document.getElementById('toggleMenuClose')!;
 
   toggleMenuButton.addEventListener('click', function() {
     menu.classList.remove('hidden');
