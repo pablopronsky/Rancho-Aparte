@@ -2,9 +2,10 @@
 import { Image } from 'astro:assets';
 import LocalRancho from '../assets/local.jpg';
 import PerroRancho from '../assets/dog_happy.jpg';
+import Contact from './Contact.astro';
 ---
 <div class="overflow-hidden bg-gradient-to-b from-purple-light to-white sm:py-32 pt-12" id="requirements">
-  <div class="mx-auto max-w-7xl px-6 lg:px-8">
+  <div class="mx-auto max-w-7xl px-6 lg:px-8" id="requisitos-guarderia" >
     <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 sm:gap-y-20 lg:mx-0 lg:max-w-none lg:grid-cols-2">
       <div class="order-2 lg:order-1 lg:pr-8 lg:pt-4">
         <Image src={PerroRancho} alt="Foto del local Rancho Aparte" class="rounded-lg" />
@@ -62,7 +63,7 @@ import PerroRancho from '../assets/dog_happy.jpg';
     </div>
   </div>
 </div>
-
+<Contact Rubro="guardería" Celular="542214989857"/>
 <style>
   #requirements {
     margin-top: 3px;
