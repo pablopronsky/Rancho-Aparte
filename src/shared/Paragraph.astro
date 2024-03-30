@@ -6,6 +6,11 @@ export interface Props{
 const {description} = Astro.props
 ---
 
-<p class={`text-sm font-normal text-gray-800 leading-7 ${description}`}>
+<p id="paragraph" class={`text-sm font-normal tracking-wide text-gray-800  ${description}`}>
     <slot/>
 </p>
+<style>
+    p {
+        font-family: "Roboto Slab", serif;
+    }
+</style>

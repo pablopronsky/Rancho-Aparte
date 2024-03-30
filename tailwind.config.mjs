@@ -7,9 +7,9 @@ export default {
 		  'purple-light': '#EBE5F9',
 		  'purple-medium': '#9C88FF',
 		  'purple-dark': '#6200EE',
-		  'gray-light': '#F4F4F4',
-		  'gray-medium': '#A9A9A9',
-		  'gray-dark': '#404040',
+		  'orange-light': '#FFD699',
+		  'orange-medium': '#FF9933',
+		  'orange-dark': '#CC6600',
 		},
 		keyframes: {
 			wiggle: {

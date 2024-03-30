@@ -24,30 +24,10 @@ const { title, description, icon, link = false, linkUrl = "#" } = Astro.props;
     {link && (
         <a
             href={linkUrl}
-            class="text-sm font-thin text-gray-600 hover:underline leading-6 animate-grow"
+            class="text-sm font-bold text-orange-500 hover:underline animate-grow hover:scale-110"
         >
           <span aria-hidden="true" class="animate-grow">+</span> info
         </a>
     )}
   </div>
-
-  <style>
-    .animate-grow {font-family: "Inter", sans-serif;
-      font-weight: 700;
-      color:mediumpurple;
-      animation: grow 1s infinite;
-    }
-
-    @keyframes grow {
-      0% {
-        transform: scale(1);
-      }
-      50% {
-        transform: scale(1.1);
-      }
-      100% {
-        transform: scale(1);
-      }
-    }
-  </style>
 </div>
