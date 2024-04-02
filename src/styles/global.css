@@ -1,7 +1,8 @@
-
-html{
+*{
+    font-family: 'Ahron', sans-serif;
     scroll-behavior: smooth;
 }
-body {
-    font-family: "Roboto Slab", serif;
-}
+@font-face {
+    font-family: 'Ahron'; 
+    src: url('../../public/font/ahronbd.ttf') format('truetype');
+  }

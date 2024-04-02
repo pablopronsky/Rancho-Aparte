@@ -4,12 +4,17 @@ export default {
 	theme: {
 	  extend: {
 		colors: {
-		  'purple-light': '#EBE5F9',
-		  'purple-medium': '#9C88FF',
-		  'purple-dark': '#6200EE',
+		  'purple-light': '#ffe2dd',
+		  'purple-medium': '#FFC5BA',
+		  'purple-dark': '#FF9878',
+		  'pink-dark' : '#C3909C',
+		  'brown-title' : '#997865',
+		  'light-background': '#fffbf5',
 		  'orange-light': '#FFD699',
 		  'orange-medium': '#FF9933',
 		  'orange-dark': '#CC6600',
+		  'orange-accent': '#EFB1A5',
+		  'darker-text' : '#2a282a',
 		},
 		keyframes: {
 			wiggle: {
