@@ -6,7 +6,6 @@ import DividerSimple from "../shared/DividerSimple.astro";
 import DividerInfo from "../shared/DividerInfo.astro";
 import Footer from "../components/Footer.astro";
 import Testimonials from "../components/Testimonials.astro";
-import Contact from "../components/Contact.astro";
 import RequirementsHairSalon from "../components/RequirementsHairSalon.astro";
 import RequirementsDayCare from "../components/RequirementsDayCare.astro";
 import DividerRequirements from "../shared/DividerRequirements.astro";
@@ -16,13 +15,14 @@ import '../styles/global.css';
 <html lang="es">
 	<head>
 		<title>Rancho Aparte</title>
-		<link rel="stylesheet" href="../styles/global.css">
 		<meta charset="utf-8" />
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Roboto+Slab:wght@100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-		<meta name="viewport" content="width=device-width" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta name="generator" content={Astro.generator} />		
+		<meta name="description" content="Rancho Aparte, guardería, peluqueria y tienda boutique para mascotas. Villa Elisa, La Plata.">
+
 	</head>
 	<body>
 		<Navbar />
@@ -35,10 +35,7 @@ import '../styles/global.css';
 		<DividerRequirements />
 		<RequirementsDayCare />
 		<Testimonials />
-		<Footer />
-		<script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-		<script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>
-		<script async src='https://d2mpatx37cqexb.cloudfront.net/delightchat-whatsapp-widget/embeds/embed.min.js'></script>      
+		<Footer />     
 	</body>
 </html>
 
