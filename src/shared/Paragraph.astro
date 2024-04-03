@@ -6,7 +6,7 @@ export interface Props{
 const {description} = Astro.props
 ---
 
-<p id="paragraph" class={`text-sm tracking-wide  ${description}`}>
+<p class={`text-sm tracking-wide  ${description}`}>
     <slot/>
 </p>
 <style>
