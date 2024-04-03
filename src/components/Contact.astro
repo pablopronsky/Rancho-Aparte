@@ -7,10 +7,10 @@ const { Rubro, Celular} = Astro.props as Props;
 
 ---
 
-<div class="flex items-center justify-center pb-5 transform transition duration-500
+<div class="flex items-center justify-center py-5 transform transition duration-500
 hover:scale-110" id="contact">
   <a href={`https://api.whatsapp.com/send/?phone=${Celular}&text&type=phone_number&app_absent=0`} class="overflow-hidden px-7 py-4 rounded-md flex space-x-2 items-center bg-purple-dark hover:bg-purple-medium">
-    <span class="relative text-2xl text-white">Contactate con {Rubro}</span>
+    <span class="relative text-2xl text-white">WhatsApp {Rubro}</span>
     <Image src={WhatsAppIcon} alt="WhatsApp Icon" class="h-11 w-11 stroke-white" />
   </a>
 </div>

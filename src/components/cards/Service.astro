@@ -12,7 +12,7 @@ export interface Props {
 const { title, description, icon, link = false, linkUrl = "#" } = Astro.props;
 ---
 
-<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border-box-border bg-box-bg shadow-lg shadow-box-shadow relative flex flex-col bg-light-background">
+<div class="p-5 sm:p-6 lg:p-8 rounded-3xl border-t-1 border-r-2 border-box-border bg-box-bg shadow-lg shadow-box-shadow relative flex flex-col bg-light-background">
   <div class="rounded-2xl bg-purple-light p-3 w-max relative hover:animate-wiggle">
     <slot set:html={icon} />
   </div>
